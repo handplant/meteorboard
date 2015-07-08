@@ -1,0 +1,21 @@
+<template name="post">
+    <div class="page post">
+        {{#with this}}
+            {{>item}}
+        {{/with}}
+
+        {{> commentCreate}}
+        <div class="comments">
+            {{#if Template.subscriptionsReady}}
+                {{#each comments}}
+                    {{> commentItem}}
+                {{/each}}
+                {{#if hasMoreComments}}
+                    <button class="btn btn-block get-more-comments"><span class="glyphicon glyphicon-chevron-down"></span></button>
+                {{/if}}
+            {{else}}
+                {{> spinner}}
+            {{/if}}
+        </div>
+    </div>
+</template>

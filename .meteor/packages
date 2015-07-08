@@ -1,0 +1,14 @@
+meteor-platform
+accounts-password
+reactive-var
+ian:accounts-ui-bootstrap-3
+iron:router
+audit-argument-checks
+meteorhacks:subs-manager
+aldeed:collection2
+twbs:bootstrap
+momentjs:moment
+juliancwirko:s-alert
+juliancwirko:s-alert-jelly
+sacha:spin
+anti:fake

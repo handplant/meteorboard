@@ -1,0 +1,27 @@
+<template name="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">METEOR BOARD</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mainnav">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="/">Latest</a></li>
+                    <li><a href="/most-liked">Most liked</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{> loginButtons}}
+                </ul>
+                {{#if currentUser}}
+                    <a href="/create" class="btn btn-primary navbar-btn navbar-right">New Post</a>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+</template>

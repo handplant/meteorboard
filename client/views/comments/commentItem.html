@@ -1,0 +1,14 @@
+<template name="commentItem">
+    <div class="commentItem">
+        <p>{{convertText body}}</p>
+        <hr>
+        <div class="row">
+            <div class="col-xs-4">
+                <button class="btn {{liked}} btn-xs like-comment"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> like {{likeCount}}</button>
+            </div>
+            <div class="col-xs-8 text-right">
+                <small class="text-muted"><span class="glyphicon glyphicon-time"></span> {{timeAgo createdAt}} by {{usernameFromId userId}}</small>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,28 @@
+/*Default*/
+h1 { margin-bottom: 30px }
+
+/*App*/
+.page { margin: 0 0 20px }
+.item { background: #f2f2f2; padding: 20px; margin-bottom: 10px }
+.item > h3 { margin-bottom: 20px }
+.item > p { margin-bottom: 20px }
+.item > hr { border-top: 1px solid #fff; }
+.item > .btn { margin-right: 10px }
+
+.commentCreate { background: #f2f2f2; padding: 20px; margin: 20px 0 }
+
+.commentItem { background: #f2f2f2; padding: 20px; margin-bottom: 10px }
+.commentItem > p { margin-bottom: 20px }
+.commentItem > hr { border-top: 1px solid #fff; }
+
+.notFound, .notFound * { text-align: center; margin-top: 0 }
+
+/*Account UI*/
+#login-dropdown-list > a:before { content: "\e008" !important; font-family: "Glyphicons Halflings"; font-size: 13px; padding-right: 5px;}
+
+/*Bootstrap Override*/
+.navbar { border-radius: 0 }
+.btn:active, .btn:focus, .btn:visited {
+    outline: none;
+    box-shadow: none;
+}
