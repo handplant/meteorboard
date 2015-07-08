@@ -1,3 +1,5 @@
+Meteor.subscribe('allUsernames');
+
 Meteor.startup(function () {
 
     sAlert.config({
