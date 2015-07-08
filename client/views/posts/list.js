@@ -12,10 +12,9 @@ Template.list.onCreated(function () {
     var self = this;
 
     Session.set('limit', 20);
-    Session.set('sort', {createdAt: -1});
 
     Deps.autorun(function () {
-        postSubs.subscribe('posts', Session.get('limit'));
+        postSubs.subscribe('posts', Session.get('sort'), Session.get('limit'));
     });
 });
 

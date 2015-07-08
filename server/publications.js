@@ -1,6 +1,7 @@
-Meteor.publish('posts', function(limit) {
+Meteor.publish('posts', function(sort, limit) {
+    check(sort, Object);
     check(limit, Number);
-    return Posts.find({}, {sort: {createdAt: -1, _id: 1}, limit: limit});
+    return Posts.find({}, {sort: sort, limit: limit});
 });
 
 Meteor.publish('currentPost', function(id) {
