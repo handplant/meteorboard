@@ -23,6 +23,7 @@ MeteorBoard ist kostenlos und Open Source.
 - juliancwirko:s-alert
 - juliancwirko:s-alert-jelly
 - reywood:iron-router-ga
+- matteodem:easy-search
 - sacha:spin
 - anti:fake
 

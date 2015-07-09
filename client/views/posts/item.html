@@ -2,7 +2,7 @@
     <div class="item">
         <small class="text-muted"><span class="glyphicon glyphicon-time"></span> {{timeAgo createdAt}} by {{usernameFromId userId}}</small>
         <h3>{{title}}</h3>
-        <p>{{convertText body}}</p>
+        <p>{{body}}</p>
         <hr>
         <button class="btn {{liked}} btn-xs like-post"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> like {{likeCount}}</button>
         <button class="btn btn-xs go-to-post"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> comments {{commentCount}}</button>

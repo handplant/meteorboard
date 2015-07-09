@@ -1,0 +1,28 @@
+<template name="search">
+
+    <div class="page search">
+
+        {{> esInput index="posts" class="form-control" allDocsOnEmpty=0 placeholder="Search..." }}
+
+        {{#ifEsInputIsEmpty index="posts"}}
+            <div class="alert alert-info">Enter a keyword!</div>
+        {{/ifEsInputIsEmpty}}
+
+        {{#ifEsIsSearching index="posts"}}
+            {{> spinner}}
+        {{else}}
+            <div class="results">
+                {{#esEach index="posts"}}
+                    {{> item}}
+                {{/esEach}}
+            </div>
+
+            {{> esLoadMoreButton index="posts" class="btn btn-block"}}
+        {{/ifEsIsSearching}}
+
+        {{#ifEsHasNoResults index="posts"}}
+            <div class="alert alert-danger">No results found!</div>
+        {{/ifEsHasNoResults}}
+    </div>
+
+</template>
