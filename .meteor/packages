@@ -10,5 +10,6 @@ twbs:bootstrap
 momentjs:moment
 juliancwirko:s-alert
 juliancwirko:s-alert-jelly
+reywood:iron-router-ga
 sacha:spin
 anti:fake
