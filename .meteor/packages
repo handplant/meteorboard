@@ -5,6 +5,7 @@ ian:accounts-ui-bootstrap-3
 iron:router
 audit-argument-checks
 meteorhacks:subs-manager
+meteorhacks:fast-render
 aldeed:collection2
 twbs:bootstrap
 momentjs:moment

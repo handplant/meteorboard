@@ -1,11 +1,10 @@
 <template name="list">
 
     <div class="page list">
-        {{#each posts}}
-            {{> item}}
-        {{/each}}
-
         {{#if Template.subscriptionsReady}}
+            {{#each posts}}
+                {{> item}}
+            {{/each}}
             {{#if hasMorePosts}}
                 <button class="btn btn-block get-more-posts"><span class="glyphicon glyphicon-chevron-down"></span></button>
             {{/if}}
