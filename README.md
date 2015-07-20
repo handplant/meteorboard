@@ -5,7 +5,7 @@ MeteorBoard is a simple Meteor bulletin board app built with [Meteor](http://met
 #####Demo:
 [meteorboard2.meteor.com](http://meteorboard2.meteor.com/)
 
-#####Folgende Packages sind bis jetzt im Einsatz:
+#####Packages:
 
 - accounts-password
 - reactive-var
