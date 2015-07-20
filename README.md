@@ -1,10 +1,6 @@
 # MeteorBoard
 
-MeteorBoard ist ein einfaches "Schwarzes Brett" in welchem angemeldete Benutzer Posts erstellen, liken und kommentieren können.
-
-Es ist mit [Meteor](http://meteor.com) umgesetzt und gleichzeitig mein Übungsprojekt um Meteor zu lernen.
-
-MeteorBoard ist kostenlos und Open Source.
+MeteorBoard is a simple Meteor bulletin board app built with [Meteor](http://meteor.com).
 
 #####Demo:
 [meteorboard2.meteor.com](http://meteorboard2.meteor.com/)
@@ -22,10 +18,6 @@ MeteorBoard ist kostenlos und Open Source.
 - momentjs:moment
 - juliancwirko:s-alert
 - juliancwirko:s-alert-jelly
-- reywood:iron-router-ga
 - matteodem:easy-search
 - sacha:spin
 - anti:fake
-
-#####Achtung:
-MeteorBoard ist im Beta Status. Benutzung auf eigene Gefahr :)
