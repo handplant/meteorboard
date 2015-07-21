@@ -1,5 +1,7 @@
 # MeteorBoard
 
+## Meteor - Blaze - Bootstrap
+
 MeteorBoard is a simple Meteor bulletin board app built with [Meteor](http://meteor.com).
 
 #####Demo:
