@@ -1,16 +1,17 @@
 <template name="list">
-
-    <div class="page list">
-        {{#if Template.subscriptionsReady}}
+    <div class="posts list">
+        <div class="wrapper">
             {{#each posts}}
                 {{> item}}
             {{/each}}
-            {{#if hasMorePosts}}
-                <button class="btn btn-block get-more-posts"><span class="glyphicon glyphicon-chevron-down"></span></button>
-            {{/if}}
+        </div>
+
+        {{#if nextPath}}
+            <a class="btn btn-primary btn-block load-more" href="{{nextPath}}">Load more <br><span class="glyphicon glyphicon-chevron-down"></span></a>
         {{else}}
-            {{> spinner}}
+            {{#unless ready}}
+                <div class="loading">{{> spinner}}</div>
+            {{/unless}}
         {{/if}}
     </div>
-
 </template>

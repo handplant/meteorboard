@@ -1,38 +1,49 @@
-var postSubs = new SubsManager({
-    cacheLimit: 20,
-    expireIn: 5
-});
+Template.list.onRendered(function () {
+    this.find('.wrapper')._uihooks = {
+        insertElement: function (node, next) {
+            $(node)
+                .hide()
+                .insertBefore(next)
+                .fadeIn();
+        },
+        moveElement: function (node, next) {
+            var $node = $(node), $next = $(next);
+            var oldTop = $node.offset().top;
+            var height = $(node).outerHeight(true);
 
-var incrementPostsLimit = function () {
-    newLimit = Session.get('limit') + 20;
-    Session.set('limit', newLimit);
-}
+            // find all the elements between next and node
+            var $inBetween = $(next).nextUntil(node);
+            if ($inBetween.length === 0)
+                $inBetween = $(node).nextUntil(next);
 
-Template.list.onCreated(function () {
-    var self = this;
+            // now put node in place
+            $(node).insertBefore(next);
 
-    Session.set('limit', 20);
+            // measure new top
+            var newTop = $(node).offset().top;
 
-    Deps.autorun(function () {
-        postSubs.subscribe('posts', Session.get('sort'), Session.get('limit'));
-    });
-});
+            // move node *back* to where it was before
+            $(node)
+                .removeClass('animate')
+                .css('top', oldTop - newTop);
 
-Template.list.events({
-    'click .get-more-posts': function (e) {
-        e.preventDefault();
-        incrementPostsLimit();
-    }
-});
+            // push every other element down (or up) to put them back
+            $inBetween
+                .removeClass('animate')
+                .css('top', oldTop < newTop ? height : -1 * height)
 
-Template.list.helpers({
-    posts: function () {
-        return Posts.find({}, {sort: Session.get('sort'), limit: Session.get('limit')});
-    },
-    hasMorePosts: function () {
-        if (parseInt(Session.get('limit')) <= Posts.find().count())
-            return true;
 
-        return false;
+            // force a redraw
+            $(node).offset();
+
+            // reset everything to 0, animated
+            $(node).addClass('animate').css('top', 0);
+            $inBetween.addClass('animate').css('top', 0);
+        },
+        removeElement: function(node) {
+            $(node).fadeOut(function() {
+                $(this).remove();
+            });
+        }
     }
 });

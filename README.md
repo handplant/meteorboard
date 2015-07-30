@@ -14,6 +14,7 @@ MeteorBoard is a simple Meteor bulletin board app built with [Meteor](http://met
 - iron:router
 - audit-argument-checks
 - meteorhacks:subs-manager
+- meteorhacks:fast-render
 - aldeed:collection2
 - twbs:bootstrap
 - ian:accounts-ui-bootstrap-3 

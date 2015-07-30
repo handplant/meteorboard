@@ -2,7 +2,8 @@
 h1 { margin-bottom: 30px }
 
 /*App*/
-.page { margin: 0 0 20px }
+.page { margin-bottom: 20px }
+.list { margin-bottom: 20px }
 .item { background: #f2f2f2; padding: 20px; margin-bottom: 10px }
 .item > h3 { margin-bottom: 20px }
 .item > p { margin-bottom: 20px }
@@ -18,6 +19,12 @@ h1 { margin-bottom: 30px }
 .search > input { margin-bottom: 20px }
 
 .notFound, .notFound * { text-align: center; margin-top: 0 }
+
+.loading{
+    position: relative;
+    height: 100px;
+    width: 100%;
+}
 
 /*Account UI*/
 #login-dropdown-list > a:before { content: "\e008" !important; font-family: "Glyphicons Halflings"; font-size: 13px; padding-right: 5px;}
