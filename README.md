@@ -4,8 +4,6 @@
 
 MeteorBoard is a simple Meteor bulletin board app built with [Meteor](http://meteor.com).
 
-#####Demo:
-[meteorboard2.meteor.com](http://meteorboard2.meteor.com/)
 
 #####Packages:
 
